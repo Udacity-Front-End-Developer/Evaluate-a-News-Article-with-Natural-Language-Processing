@@ -4,7 +4,8 @@
 	"description": "A web tool that allows users to run Natural Language Processing (NLP) on articles or blogs found on other websites.",
 	"main": "index.js",
 	"scripts": {
-		"start": "node src/server/index.js"
+		"start": "node src/server/index.js",
+		"build:dev": "webpack serve --config webpack.dev.js --open"
 	},
 	"author": "Anes Marzooki",
 	"license": "MIT",
