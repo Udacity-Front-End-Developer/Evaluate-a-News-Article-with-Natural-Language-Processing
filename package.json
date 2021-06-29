@@ -1,0 +1,22 @@
+{
+	"name": "nlp-news",
+	"version": "1.0.0",
+	"description": "A web tool that allows users to run Natural Language Processing (NLP) on articles or blogs found on other websites.",
+	"main": "index.js",
+	"scripts": {
+		"start": "node src/server/index.js"
+	},
+	"author": "Anes Marzooki",
+	"license": "MIT",
+	"dependencies": {
+		"express": "^4.17.1",
+		"webpack": "^4.35.3",
+		"webpack-cli": "^3.3.5"
+	},
+	"devDependencies": {
+		"@babel/core": "^7.14.6",
+		"@babel/preset-env": "^7.14.7",
+		"babel-loader": "^8.2.2",
+		"webpack-dev-server": "^3.7.2"
+	}
+}
