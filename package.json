@@ -1,5 +1,5 @@
 {
-	"name": "nlp-news",
+	"name": "nlp-news-evaluation",
 	"version": "1.0.0",
 	"description": "A web tool that allows users to run Natural Language Processing (NLP) on articles or blogs found on other websites.",
 	"main": "index.js",
