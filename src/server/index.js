@@ -11,4 +11,5 @@ app.use(express.static('dist'));
 app.get('/', (req, res) => {
 	res.sendFile(path.resolve('dist/index.html'));
 });
+
 app.listen(_port, () => console.log(`Server is live at port: ${_port}`));

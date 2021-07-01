@@ -1,4 +1,7 @@
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const OptimizeCssAssestsPlugin = require('optimize-css-assets-webpack-plugin');
+const TerserPlugin = require('terser-webpack-plugin');
 const path = require('path');
 
 module.exports = {
@@ -7,6 +10,10 @@ module.exports = {
 	output: {
 		path: path.resolve(__dirname, 'dist'),
 		filename: 'bundle.js',
+	},
+	optimization: {
+		minimize: true,
+		minimizer: [new OptimizeCssAssestsPlugin({}), new TerserPlugin()],
 	},
 	module: {
 		rules: [
@@ -19,6 +26,10 @@ module.exports = {
 						presets: ['@babel/preset-env'],
 					},
 				},
+			},
+			{
+				test: /\.sass$/,
+				loader: [MiniCssExtractPlugin.loader, 'css-loader', 'sass-loader'],
 			},
 		],
 	},
