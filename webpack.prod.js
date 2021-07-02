@@ -13,7 +13,7 @@ module.exports = {
 	},
 	optimization: {
 		minimize: true,
-		minimizer: [new OptimizeCssAssestsPlugin({}), new TerserPlugin()],
+		minimizer: [new OptimizeCssAssestsPlugin({}), new TerserPlugin({})],
 	},
 	module: {
 		rules: [
@@ -24,11 +24,12 @@ module.exports = {
 					loader: 'babel-loader',
 					options: {
 						presets: ['@babel/preset-env'],
+						plugins: ['@babel/plugin-transform-runtime'],
 					},
 				},
 			},
 			{
-				test: /\.sass$/,
+				test: /\.scss$/,
 				loader: [MiniCssExtractPlugin.loader, 'css-loader', 'sass-loader'],
 			},
 		],
@@ -37,5 +38,6 @@ module.exports = {
 		new HtmlWebpackPlugin({
 			template: 'src/client/views/index.html',
 		}),
+		new MiniCssExtractPlugin(),
 	],
 };
