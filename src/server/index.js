@@ -14,6 +14,7 @@ app.get('/', (req, res) => {
 });
 
 app.get('/analyze', (req, res) => {
-	res.send('api response!');
+	res.send(require('./apiCall')(process.env.API_KEY, 'happy to see you'));
 });
+
 app.listen(_port, () => console.log(`Server is live at port: ${_port}`));

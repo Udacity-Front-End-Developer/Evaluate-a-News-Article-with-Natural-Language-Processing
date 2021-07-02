@@ -13,7 +13,8 @@ const fetchData = async () => {
 		console.log('error', error);
 	}
 };
-document.querySelector('.form__btn').addEventListener('click', async (e) => {
+
+document.querySelector('.form__btn').addEventListener('click', (e) => {
 	e.preventDefault();
 	console.log('clicked');
 	fetchData();
