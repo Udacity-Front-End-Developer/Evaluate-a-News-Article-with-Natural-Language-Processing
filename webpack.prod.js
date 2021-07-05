@@ -7,9 +7,15 @@ const path = require('path');
 module.exports = {
 	mode: 'production',
 	entry: './src/client/index.js',
+	// output: {
+	// 	libraryTarget: 'var',
+	// 	library: 'Client',
+	// },
 	output: {
 		path: path.resolve(__dirname, 'dist'),
 		filename: 'bundle.js',
+		libraryTarget: 'var',
+		library: 'Client',
 	},
 	optimization: {
 		minimize: true,
