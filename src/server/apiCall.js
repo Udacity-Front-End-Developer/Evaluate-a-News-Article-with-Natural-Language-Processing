@@ -1,5 +1,4 @@
 const fetch = require('node-fetch');
-
 module.exports = async (key, link) => {
 	let hostname = `https://api.meaningcloud.com`;
 	let path = `/sentiment-2.1?key=${key}&url=${link}&model=general&lang=en`;

@@ -1,10 +1,8 @@
-// import { getData } from './getData.js';
 const formHandler = (event) => {
+	event.preventDefault();
 	// Check for valid input
 	event.target.classList.add('loading');
 	event.target.setAttribute('disabled', '');
-
-	event.preventDefault();
 	let url = document.querySelector('#text');
 	(async () => {
 		let response = await Client.getData({ link: url.value }, event);

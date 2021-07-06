@@ -5,7 +5,7 @@ const express = require('express');
 const path = require('path');
 const cors = require('cors');
 const _port = 3000;
-let dataObj = {};
+let _dataObj = {};
 
 const app = express();
 app.use(cors());
@@ -18,12 +18,10 @@ app.get('/', (req, res) => {
 });
 
 app.post('/analyze', (req, res) => {
-	console.log(req.body.link);
 	(async () => {
-		dataObj = await require('./apiCall')(process.env.API_KEY, req.body.link);
-		console.log(dataObj);
-		res.send(dataObj);
+		_dataObj = await require('./apiCall')(process.env.API_KEY, req.body.link);
+		res.send(_dataObj);
 	})();
 });
 
-app.listen(_port, () => console.log(`Server is live at port: ${_port}`));
+app.listen(_port, () => console.log(`Server is live at port: ${_port}.`));
