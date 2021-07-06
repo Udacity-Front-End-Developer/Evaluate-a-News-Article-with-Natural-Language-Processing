@@ -9,7 +9,8 @@ const formHandler = (event) => {
 		try {
 			event.target.classList.remove('loading');
 			event.target.removeAttribute('disabled');
-			document.querySelector('.results__data').innerHTML = response.agreement;
+			// Update UI
+			Client.updateUi(response);
 		} catch (error) {}
 	})();
 };
