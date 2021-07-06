@@ -1,5 +1,9 @@
 const updateUi = (data) => {
 	let resultContainer = document.querySelector('.results__data');
+	// If container has some data in it, empty it.
+	if (resultContainer.hasChildNodes()) {
+		resultContainer.innerHTML = '';
+	}
 	let fragment = document.createDocumentFragment();
 	const dataEntries = Object.entries(data);
 	for (const [entry, state] of dataEntries) {
