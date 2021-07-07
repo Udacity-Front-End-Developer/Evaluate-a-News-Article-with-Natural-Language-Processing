@@ -15,7 +15,9 @@ const formHandler = (event) => {
 			} catch (error) {}
 		})();
 	} else {
-		Client.errorMessage('URL not valid!');
+		event.target.classList.remove('loading');
+		event.target.removeAttribute('disabled');
+		Client.displayError('URL not valid!');
 	}
 };
 
