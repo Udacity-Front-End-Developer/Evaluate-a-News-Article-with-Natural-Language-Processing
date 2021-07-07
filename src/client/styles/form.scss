@@ -72,6 +72,13 @@
 	transition: 1s;
 	letter-spacing: 0.5px;
 
+	&[disabled] {
+		background-color: #b4aebb;
+		&:hover {
+			background: #b4aebb;
+		}
+	}
+
 	&:hover {
 		// letter-spacing: 2px;
 		background: var(--surface1);
