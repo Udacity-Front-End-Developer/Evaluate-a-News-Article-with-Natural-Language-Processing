@@ -5,6 +5,13 @@ const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 module.exports = {
 	entry: './src/client/index.js',
 	mode: 'development',
+	devServer: {
+		proxy: {
+			'/': {
+				target: 'http://localhost:3000/',
+			},
+		},
+	},
 	output: {
 		path: path.resolve(__dirname, 'dist'),
 		filename: 'bundle.js',
