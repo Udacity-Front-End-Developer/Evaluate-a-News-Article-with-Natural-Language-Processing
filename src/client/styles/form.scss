@@ -24,11 +24,10 @@
 		#text {
 			resize: none;
 			border: none;
-			border-bottom: 1px solid #bbc8ce;
+			border-bottom: 1px solid var(--border);
 			padding: 0.8em;
 			padding-bottom: 0.1rem;
 			background-color: transparent;
-			// font-family: 'Inconsolata';
 			font-size: 1.5rem;
 			font-weight: 300;
 			white-space: nowrap;
@@ -37,9 +36,13 @@
 			width: 100%;
 			overflow: hidden;
 
+			&.invalid {
+				border: 2px solid var(--error);
+			}
+
 			&:focus-visible {
 				border: none;
-				border-bottom: 2px solid white;
+				border-bottom: 2px solid #fff;
 				outline: none;
 
 				&::placeholder {

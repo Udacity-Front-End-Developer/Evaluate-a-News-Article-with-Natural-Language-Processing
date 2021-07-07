@@ -5,13 +5,15 @@ module.exports = async (key, link) => {
 	const response = await fetch(`${hostname}${path}`);
 	const data = await response.json();
 	try {
-		return {
-			agreement: data.agreement,
-			subjectivity: data.subjectivity,
-			confidence: data.confidence,
-			irony: data.irony,
-		};
+		console.log(data);
+		return data;
+		// return {
+		// 	agreement: data.agreement,
+		// 	subjectivity: data.subjectivity,
+		// 	confidence: data.confidence,
+		// 	irony: data.irony,
+		// };
 	} catch (error) {
-		console.log(error);
+		return console.log(error);
 	}
 };

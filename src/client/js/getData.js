@@ -1,5 +1,5 @@
-const getData = async (data, event) => {
-	const response = await fetch('/analyze', {
+const getData = async (data = {}, path = '', event) => {
+	const response = await fetch(path, {
 		method: 'POST',
 		credentials: 'same-origin',
 		headers: {
