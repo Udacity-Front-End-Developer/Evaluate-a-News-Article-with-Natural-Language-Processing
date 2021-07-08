@@ -9,7 +9,7 @@ const formHandler = (event) => {
 	if (Client.isUrlValid(url)) {
 		// If url is valid get data.
 		(async () => {
-			let response = await Client.getData({ link: url }, '/analyze', event);
+			let response = await Client.getData({ link: url }, '/analyze');
 			try {
 				event.target.classList.remove('loading');
 				event.target.removeAttribute('disabled');

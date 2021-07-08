@@ -1,4 +1,4 @@
-const getData = async (data = {}, path = '', event) => {
+const getData = async (data = {}, path = '') => {
 	const response = await fetch(path, {
 		method: 'POST',
 		credentials: 'same-origin',
