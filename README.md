@@ -90,7 +90,6 @@ Testing an async function fails.
 
 # References used:
 
-- [app.address is not a function](https://stackoverflow.com/questions/33986863/mocha-api-testing-getting-typeerror-app-address-is-not-a-function)
 - [MDN](https://developer.mozilla.org)
 - [JSDoc](https://jsdoc.app/)
 - [RegeneratorRuntime is not defined issue](https://github.com/liferay/liferay-npm-tools/issues/105)
