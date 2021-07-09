@@ -1,5 +1,3 @@
-<style>H3{color:crimson;}</style>
-
 # News article Evaluator with Natural Language Processing
 
 _This project is part of Udacity's front end nanodegree course._
