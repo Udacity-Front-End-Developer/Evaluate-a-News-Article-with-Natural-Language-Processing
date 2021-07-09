@@ -27,4 +27,7 @@ app.post('/analyze', (req, res) => {
 	})();
 });
 
+/**
+ * This exports the app so our test can work with its own instance
+ */
 module.exports = app;
