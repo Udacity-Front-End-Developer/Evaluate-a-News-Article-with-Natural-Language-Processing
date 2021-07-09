@@ -11,7 +11,7 @@ const getData = async (data = {}, path = '') => {
 		const data = await response.json();
 		return data;
 	} catch (error) {
-		console.log('error', error);
+		// TODO: Handles error properly
 	}
 };
 
