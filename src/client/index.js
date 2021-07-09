@@ -16,9 +16,9 @@ export { formHandler, getData, updateUi, isUrlValid, displayError };
 
 /**
  * This will dictate whether the user can click on the analyse button or not
- * @param {InputEvent} event
+ * @param {InputEvent} e
  */
-const buttonStateHandler = (event) => {
+const buttonStateHandler = (e) => {
 	if (e.target.value.length > 1) {
 		document.querySelector('.error').innerHTML = '';
 		document.querySelector('.form__btn').removeAttribute('disabled');
@@ -31,9 +31,9 @@ const buttonStateHandler = (event) => {
 /**
  * This is the event for when the user types in the input field
  */
-document
-	.querySelector('#text')
-	.addEventListener('input', buttonStateHandler(e));
+document.querySelector('#text').addEventListener('input', (e) => {
+	buttonStateHandler(e);
+});
 
 /**
  * This is the event for when the user clicks the analyse button
