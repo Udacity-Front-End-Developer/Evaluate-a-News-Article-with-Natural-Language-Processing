@@ -101,6 +101,11 @@ Testing an async function fails.
 
 ```
 
+# Review
+
+- [x] Project reviewed and passed successfully.
+      ![alt text](repo_images/review.png)
+
 # References used:
 
 - [MDN](https://developer.mozilla.org)
