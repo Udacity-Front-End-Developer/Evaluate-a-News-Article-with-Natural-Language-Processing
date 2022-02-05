@@ -1,10 +1,24 @@
-# News article Evaluator with Natural Language Processing
+# Evaluate a News Article with Natural Language Processing
 
-_This project is part of Udacity's front end nanodegree course._
+The fourth submitted project for the **Build Tools and Single Page Web Apps**
+chapter of the Udacity's Front End Developer nanodegree.
 
-A web tool that allows users to run Natural Language Processing (NLP) on articles or blogs found on other websites. NLP is the ability of an application to understand the human language, written or oral.
+A web tool that allows users to run Natural Language Processing (NLP) on
+articles or blogs found on other websites.
+
+See the [Introduction](INTRODUCTION.md).
 
 The app handles user's input and displays the api's response in the view. It has some offline functionality through service workers setup in webpack.
+
+## Rubric
+
+This project has been evaluated by a Udacity code reviewer according to the
+Evaluate a news article with Natural Language Processing project specifications below.
+
+<details>
+<summary>Project specification:</summary>
+<img src="repo_images/specifications.png"/>
+</details>
 
 # Installation
 
@@ -14,6 +28,7 @@ _[NodeJs](https://nodejs.org/en/) must be installed on your local machine._
 
 ## Note:
 
+**IMPORTANT!!!**
 **_The app uses the meaningcloud' Sentiment Analysis API. For the app to work you need an api key from [meaningcloud](https://www.meaningcloud.com)._**
 
 Before proceeding with the installation you need to create a `.env` file in the project directory with your api key inside of it.
